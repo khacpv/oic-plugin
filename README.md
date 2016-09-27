@@ -3,8 +3,11 @@
 ## References
 
 [Plugin Deployment](https://www.jetbrains.com/help/idea/2016.2/plugin-development-guidelines.html)
+
 [Intellij SDK](http://www.jetbrains.org/intellij/sdk/docs/index.html)
+
 [Plugin Documentation](https://github.com/JetBrains/intellij-community)
+
 [Sample Android Studio Plugin](https://yalantis.com/blog/android-studio-plugin-development)
 
 ## How to install

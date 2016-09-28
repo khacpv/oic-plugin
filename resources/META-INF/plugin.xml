@@ -1,53 +1,67 @@
-<idea-plugin version="2">
-  <id>com.oic.plugin.multidimens</id>
-  <name>Android Multi Dimensions support</name>
-  <version>1.0</version>
-  <vendor email="khacpv@gmail.com" url="http://oicmap.com">OICMap Corp</vendor>
+<idea-plugin version="2" url="http://www.jetbrains.com/idea">
+    <id>com.oic.plugin.multidimens</id>
+    <name>Android Multi Dimensions support</name>
+    <version>1.0</version>
+    <vendor email="khacpv@gmail.com" url="http://oicmap.com">OICMap Corp</vendor>
 
-  <description><![CDATA[
+    <description><![CDATA[
       Easy to convert dimension to other folder
     ]]></description>
 
-  <change-notes><![CDATA[
+    <change-notes><![CDATA[
       first commit
     ]]>
-  </change-notes>
+    </change-notes>
 
-  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
-  <idea-version since-build="141.0"/>
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="141.0"/>
 
-  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
-       on how to target different products -->
-  <depends>com.intellij.modules.lang</depends>
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.lang</depends>
+    <depends optional="true">com.intellij.modules.androidstudio</depends>
 
-  <extensions defaultExtensionNs="com.intellij">
-    <!-- Add your extensions here -->
-  </extensions>
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
 
-  <application-components>
-    <!-- Add your application components here -->
-  </application-components>
+    <application-components>
+        <!-- Add your application components here -->
+        <component>
+            <implementation-class>com.oic.plugin.multidimens.application.MyApplicationComp</implementation-class>
+        </component>
+    </application-components>
 
-  <project-components>
-    <!-- Add your project components here -->
-  </project-components>
+    <project-components>
+        <!-- Add your project components here -->
+        <component>
+            <implementation-class>com.oic.plugin.multidimens.project.MyProjectComp</implementation-class>
+        </component>
+    </project-components>
 
-  <actions>
-    <!-- Add your actions here -->
-    <action id="3421" class="com.oic.plugin.multidimens.PasteAction" text="Paste Dimens"
-            description="Paste Dimens">
-      <add-to-group group-id="EditorPopupMenu" anchor="after" relative-to-action="PasteMultiple"/>
-      <add-to-group group-id="ConsoleView.PopupMenu" anchor="after" relative-to-action="ConsoleView.Copy"/>
-      <add-to-group group-id="EditorActions" anchor="first"/>
-      <keyboard-shortcut keymap="$default" first-keystroke="ctrl shift D"/>
-    </action>
-    <group id="MyPlugin.SampleMenu" text="_Sample Menu" description="Sample Menu">
-      <add-to-group group-id="MainMenu" anchor="last"/>
-      <action class="com.oic.plugin.multidimens.TextBoxes" id="MyPlugin.Textboxes" text="Text _Boxes" description="A test menu item"/>
-      <action class="com.oic.plugin.multidimens.MyShowDialog" id="MyPlugin.Dialogs" text="Text _Dialog" description="A test menu item"/>
+    <module-components>
+        <!-- Add your module components here -->
+        <component>
+            <implementation-class>com.oic.plugin.multidimens.module.MyModuleComp</implementation-class>
+        </component>
+    </module-components>
 
-    </group>
-
-  </actions>
+    <actions>
+        <!-- Add your actions here -->
+        <action id="3421" class="com.oic.plugin.multidimens.PasteAction" text="Paste Dimens"
+                description="Paste Dimens">
+            <add-to-group group-id="EditorPopupMenu" anchor="after" relative-to-action="PasteMultiple"/>
+            <add-to-group group-id="ConsoleView.PopupMenu" anchor="after" relative-to-action="ConsoleView.Copy"/>
+            <add-to-group group-id="EditorActions" anchor="first"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl shift D"/>
+        </action>
+        <group id="MyPlugin.SampleMenu" text="_Sample Menu" description="Sample Menu">
+            <add-to-group group-id="MainMenu" anchor="last"/>
+            <action class="com.oic.plugin.multidimens.TextBoxes" id="MyPlugin.Textboxes" text="Text _Boxes"
+                    description="A test menu item"/>
+            <action class="com.oic.plugin.multidimens.MyShowDialog" id="MyPlugin.Dialogs" text="Text _Dialog"
+                    description="A test menu item"/>
+        </group>
+    </actions>
 
 </idea-plugin>

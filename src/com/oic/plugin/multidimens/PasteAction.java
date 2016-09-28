@@ -50,7 +50,7 @@ public class PasteAction extends EditorAction {
         public void executeWriteAction(Editor editor, DataContext dataContext) {
             Document document = editor.getDocument();
 
-            if (editor == null || document == null || !document.isWritable()) {
+            if (!document.isWritable()) {
                 return;
             }
 

@@ -1,4 +1,4 @@
-package com.oic.plugin.multidimens;
+package com.oic.plugin.multidimens.sample;
 
 import com.intellij.openapi.actionSystem.DataContext;
 import com.intellij.openapi.actionSystem.DataKeys;

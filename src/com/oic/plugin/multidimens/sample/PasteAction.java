@@ -1,29 +1,16 @@
-package com.oic.plugin.multidimens;
+package com.oic.plugin.multidimens.sample;
 
-import com.google.gson.annotations.Since;
-import com.intellij.internal.psiView.ViewerTreeBuilder;
-import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.actionSystem.DataContext;
-import com.intellij.openapi.actionSystem.DataKeys;
 import com.intellij.openapi.editor.*;
 import com.intellij.openapi.editor.actionSystem.EditorAction;
 import com.intellij.openapi.editor.actionSystem.EditorActionHandler;
 import com.intellij.openapi.editor.actionSystem.EditorWriteActionHandler;
-import com.intellij.openapi.fileEditor.impl.text.TextEditorState;
 import com.intellij.openapi.ide.CopyPasteManager;
 import com.intellij.openapi.ui.MessageType;
-import com.intellij.openapi.ui.popup.Balloon;
-import com.intellij.openapi.ui.popup.JBPopupFactory;
-import com.intellij.openapi.util.TextRange;
-import com.intellij.openapi.wm.StatusBar;
-import com.intellij.openapi.wm.WindowManager;
-import com.intellij.ui.awt.RelativePoint;
-import com.thoughtworks.xstream.mapper.Mapper;
 
 import javax.swing.*;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
-import java.awt.*;
 import java.awt.datatransfer.DataFlavor;
 import java.awt.datatransfer.UnsupportedFlavorException;
 import java.io.IOException;

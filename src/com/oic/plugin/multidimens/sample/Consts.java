@@ -1,4 +1,4 @@
-package com.oic.plugin.multidimens;
+package com.oic.plugin.multidimens.sample;
 
 /**
  * Created by khacpham on 9/27/16.

@@ -23,6 +23,7 @@
 
     <extensions defaultExtensionNs="com.intellij">
         <!-- Add your extensions here -->
+        <treeStructureProvider implementation="com.oic.plugin.multidimens.extensions.TextOnlyTreeStructureProvider"/>
     </extensions>
 
     <application-components>
@@ -55,6 +56,7 @@
             <add-to-group group-id="EditorActions" anchor="first"/>
             <keyboard-shortcut keymap="$default" first-keystroke="ctrl shift D"/>
         </action>
+
         <group id="MyPlugin.SampleMenu" text="_Sample Menu" description="Sample Menu">
             <add-to-group group-id="MainMenu" anchor="last"/>
             <action class="com.oic.plugin.multidimens.TextBoxes" id="MyPlugin.Textboxes" text="Text _Boxes"
@@ -62,6 +64,16 @@
             <action class="com.oic.plugin.multidimens.MyShowDialog" id="MyPlugin.Dialogs" text="Text _Dialog"
                     description="A test menu item"/>
         </group>
+
+        <action id="EditorBasics.EditorIllustration" class="com.oic.plugin.multidimens.action.EditorIllustration"
+                text="Editor Basics" description="Illustrates how to plug an action in">
+            <add-to-group group-id="EditorPopupMenu" anchor="last"/>
+        </action>
+
+        <action id="OicPlugin.GenerateDimensions" class="com.oic.plugin.multidimens.action.MakeMultiDimenAction"
+                text="Generate Multi Dimension" description="Generate multi dimensions values">
+            <add-to-group group-id="ProjectViewPopupMenu" anchor="last"/>
+        </action>
     </actions>
 
 </idea-plugin>

@@ -1,25 +1,19 @@
 package com.oic.plugin.multidimens.action;
 
-import com.intellij.ide.projectView.ProjectViewNode;
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.actionSystem.CommonDataKeys;
-import com.intellij.openapi.editor.Editor;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.ui.Messages;
 import com.intellij.packageDependencies.ui.FileNode;
 import com.intellij.pom.Navigatable;
-import com.intellij.psi.*;
-import com.intellij.psi.impl.PsiElementBase;
-import com.intellij.psi.impl.file.PsiJavaDirectoryImpl;
-import com.intellij.psi.impl.source.PsiFileImpl;
-import com.intellij.psi.impl.source.PsiJavaFileImpl;
+import com.intellij.psi.NavigatablePsiElement;
+import com.intellij.psi.PsiDirectory;
+import com.intellij.psi.PsiElement;
 import com.intellij.psi.impl.source.xml.XmlFileImpl;
-import com.intellij.psi.xml.*;
-import com.intellij.util.messages.impl.Message;
-import com.intellij.util.ui.tree.AbstractFileTreeTable;
+import com.intellij.psi.xml.XmlDocument;
+import com.intellij.psi.xml.XmlTag;
 import org.junit.Assert;
-import org.xml.sax.XMLFilter;
 
 /**
  * Created by FRAMGIA\pham.van.khac on 9/29/16.

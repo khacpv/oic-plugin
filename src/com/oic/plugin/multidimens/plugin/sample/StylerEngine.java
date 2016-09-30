@@ -1,4 +1,4 @@
-package com.oic.plugin.multidimens.sample;
+package com.oic.plugin.multidimens.plugin.sample;
 
 import com.intellij.openapi.util.Pair;
 import org.w3c.dom.DOMImplementation;

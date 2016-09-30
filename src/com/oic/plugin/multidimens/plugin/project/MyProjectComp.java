@@ -1,4 +1,4 @@
-package com.oic.plugin.multidimens.project;
+package com.oic.plugin.multidimens.plugin.project;
 
 import com.intellij.openapi.components.ProjectComponent;
 import com.intellij.openapi.project.Project;

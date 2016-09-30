@@ -23,33 +23,33 @@
 
     <extensions defaultExtensionNs="com.intellij">
         <!-- Add your extensions here -->
-        <!--<treeStructureProvider implementation="com.oic.plugin.multidimens.extensions.TextOnlyTreeStructureProvider"/>-->
+        <!--<treeStructureProvider implementation="com.oic.plugin.multidimens.plugin.extensions.TextOnlyTreeStructureProvider"/>-->
     </extensions>
 
     <application-components>
         <!-- Add your application components here -->
         <component>
-            <implementation-class>com.oic.plugin.multidimens.application.MyApplicationComp</implementation-class>
+            <implementation-class>com.oic.plugin.multidimens.plugin.application.MyApplicationComp</implementation-class>
         </component>
     </application-components>
 
     <project-components>
         <!-- Add your project components here -->
         <component>
-            <implementation-class>com.oic.plugin.multidimens.project.MyProjectComp</implementation-class>
+            <implementation-class>com.oic.plugin.multidimens.plugin.project.MyProjectComp</implementation-class>
         </component>
     </project-components>
 
     <module-components>
         <!-- Add your module components here -->
         <component>
-            <implementation-class>com.oic.plugin.multidimens.module.MyModuleComp</implementation-class>
+            <implementation-class>com.oic.plugin.multidimens.plugin.module.MyModuleComp</implementation-class>
         </component>
     </module-components>
 
     <actions>
         <!-- Add your actions here -->
-        <!--<action id="3421" class="com.oic.plugin.multidimens.sample.PasteAction" text="Paste Dimens"-->
+        <!--<action id="3421" class="com.oic.plugin.multidimens.plugin.sample.PasteAction" text="Paste Dimens"-->
                 <!--description="Paste Dimens">-->
             <!--<add-to-group group-id="EditorPopupMenu" anchor="after" relative-to-action="PasteMultiple"/>-->
             <!--<add-to-group group-id="ConsoleView.PopupMenu" anchor="after" relative-to-action="ConsoleView.Copy"/>-->
@@ -59,18 +59,18 @@
 
         <!--<group id="MyPlugin.SampleMenu" text="_Sample Menu" description="Sample Menu">-->
             <!--<add-to-group group-id="MainMenu" anchor="last"/>-->
-            <!--<action class="com.oic.plugin.multidimens.sample.TextBoxes" id="MyPlugin.Textboxes" text="Text _Boxes"-->
+            <!--<action class="com.oic.plugin.multidimens.plugin.sample.TextBoxes" id="MyPlugin.Textboxes" text="Text _Boxes"-->
                     <!--description="A test menu item"/>-->
-            <!--<action class="com.oic.plugin.multidimens.sample.MyShowDialog" id="MyPlugin.Dialogs" text="Text _Dialog"-->
+            <!--<action class="com.oic.plugin.multidimens.plugin.sample.MyShowDialog" id="MyPlugin.Dialogs" text="Text _Dialog"-->
                     <!--description="A test menu item"/>-->
         <!--</group>-->
 
-        <!--<action id="EditorBasics.EditorIllustration" class="com.oic.plugin.multidimens.sample.EditorIllustration"-->
+        <!--<action id="EditorBasics.EditorIllustration" class="com.oic.plugin.multidimens.plugin.sample.EditorIllustration"-->
                 <!--text="Editor Basics" description="Illustrates how to plug an action in">-->
             <!--<add-to-group group-id="EditorPopupMenu" anchor="last"/>-->
         <!--</action>-->
 
-        <action id="OicPlugin.GenerateDimensions" class="com.oic.plugin.multidimens.action.MakeMultiDimenAction"
+        <action id="OicPlugin.GenerateDimensions" class="com.oic.plugin.multidimens.plugin.action.MakeMultiDimenAction"
                 text="Generate Multi Dimension" description="Generate multi dimensions values">
             <add-to-group group-id="ProjectViewPopupMenu" anchor="last"/>
         </action>

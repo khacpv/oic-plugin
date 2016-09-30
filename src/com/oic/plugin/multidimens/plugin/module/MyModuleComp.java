@@ -1,10 +1,7 @@
-package com.oic.plugin.multidimens.module;
+package com.oic.plugin.multidimens.plugin.module;
 
-import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.module.ModuleComponent;
 import com.intellij.openapi.module.Module;
-import com.intellij.openapi.util.Computable;
-import com.intellij.openapi.util.JDOMExternalizer;
 import org.jetbrains.annotations.NotNull;
 
 /**

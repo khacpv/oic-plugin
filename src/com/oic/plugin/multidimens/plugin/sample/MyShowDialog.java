@@ -1,4 +1,4 @@
-package com.oic.plugin.multidimens.sample;
+package com.oic.plugin.multidimens.plugin.sample;
 
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;

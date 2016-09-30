@@ -124,6 +124,7 @@ public class FormMain extends JFrame implements ActionListener {
             @Override
             public void onNodeLeftMouseClick(MouseEvent event, DefaultMutableTreeNode node) {
                 if (node.toString().equalsIgnoreCase(rootNode.toString())) {
+                    textContent.setText("");
                     return;
                 }
 

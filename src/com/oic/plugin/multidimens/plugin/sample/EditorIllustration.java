@@ -1,4 +1,4 @@
-package com.oic.plugin.multidimens.sample;
+package com.oic.plugin.multidimens.plugin.sample;
 
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
@@ -9,7 +9,7 @@ import com.intellij.openapi.editor.actionSystem.EditorActionManager;
 import com.intellij.openapi.editor.actionSystem.TypedAction;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.ui.Messages;
-import com.oic.plugin.multidimens.action.handler.MyTypedHandler;
+import com.oic.plugin.multidimens.plugin.handler.MyTypedHandler;
 
 /**
  * Created by FRAMGIA\pham.van.khac on 9/29/16.

@@ -1,4 +1,4 @@
-package com.oic.plugin.multidimens.application;
+package com.oic.plugin.multidimens.plugin.application;
 
 import com.intellij.openapi.components.ApplicationComponent;
 import org.jetbrains.annotations.NotNull;

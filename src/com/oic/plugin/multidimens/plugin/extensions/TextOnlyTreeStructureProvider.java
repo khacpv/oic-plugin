@@ -1,11 +1,10 @@
-package com.oic.plugin.multidimens.extensions;
+package com.oic.plugin.multidimens.plugin.extensions;
 
 import com.intellij.ide.highlighter.JavaFileType;
 import com.intellij.ide.projectView.TreeStructureProvider;
 import com.intellij.ide.projectView.ViewSettings;
 import com.intellij.ide.projectView.impl.nodes.PsiFileNode;
 import com.intellij.ide.util.treeView.AbstractTreeNode;
-import com.intellij.openapi.fileTypes.PlainTextFileType;
 import com.intellij.openapi.vfs.VirtualFile;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;

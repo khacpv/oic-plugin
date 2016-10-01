@@ -9,16 +9,18 @@ import java.awt.event.ActionEvent;
  */
 public class InsertDimenMenu extends JPopupMenu {
 
-    JMenuItem itemInsert;
+    private static final String MENU_ADD_VALUES = "Add dimens.xml";
 
     public InsertDimenMenu(OnInsertDimenListener listener) {
-        itemInsert = new JMenuItem(new AbstractAction("Add new dimen") {
+
+        JMenuItem itemInsert = new JMenuItem(new AbstractAction(MENU_ADD_VALUES) {
             public void actionPerformed(ActionEvent e) {
                 String name = JOptionPane.showInputDialog("Dimen file name: ");
                 listener.onInsertDimen(name);
             }
         });
-        add(itemInsert);
+
+        this.add(itemInsert);
     }
 
     public interface OnInsertDimenListener {

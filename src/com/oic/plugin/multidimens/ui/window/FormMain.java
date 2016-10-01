@@ -8,7 +8,10 @@ import com.intellij.psi.impl.source.xml.XmlFileImpl;
 import com.intellij.psi.xml.XmlDocument;
 import com.intellij.psi.xml.XmlTag;
 import com.oic.plugin.multidimens.common.MouseUtils;
+import com.oic.plugin.multidimens.common.view.cell.CellRenderer;
 import com.oic.plugin.multidimens.data.VirtualFileDimen;
+import com.oic.plugin.multidimens.logic.LogicFactory;
+import com.oic.plugin.multidimens.logic.LogicXmlRead;
 import com.oic.plugin.multidimens.ui.menu.EditDeleteMenu;
 import com.oic.plugin.multidimens.ui.menu.InsertDimenMenu;
 import org.junit.Assert;
@@ -40,10 +43,18 @@ public class FormMain extends JFrame implements ActionListener {
     private JTextPane textContent;
     private JTree treeValues;
     private JButton buttonExport;
+    private JSplitPane splitPane;
+    private JLabel textHelp;
+    private CellRenderer cellRenderer;
 
     private DefaultMutableTreeNode rootNode;
-    private DefaultMutableTreeNode selectedNode;
+    VirtualFileDimen selectedValuesFolder;
     private ArrayList<VirtualFileDimen> files = new ArrayList<>();
+
+    private Project project;
+    private XmlFileImpl xmlFile;
+
+    private LogicXmlRead xmlRead = LogicFactory.getLogicXmlRead();
 
     public FormMain() {
         super("MDT Tool");
@@ -72,7 +83,13 @@ public class FormMain extends JFrame implements ActionListener {
             files.add(new VirtualFileDimen(dimension));
         }
 
-        refreshTree();
+        cellRenderer = new CellRenderer("");
+        treeValues.setCellRenderer(cellRenderer);
+
+        // set hint text
+        MouseUtils.setHintOnMouseHover(treeValues,"Select file to see changes", textHelp);
+        MouseUtils.setHintOnMouseHover(textContent,"Type to edit", textHelp);
+        MouseUtils.setHintOnMouseHover(buttonExport,"Write to dimens.xml files", textHelp);
     }
 
     private void initEvents() {
@@ -129,21 +146,43 @@ public class FormMain extends JFrame implements ActionListener {
                 }
 
                 // update content panel
-                textContent.setText(node.toString());
+                VirtualFileDimen selectedFile = (VirtualFileDimen) node.getUserObject();
+                float factor = selectedFile.getDimen() / selectedValuesFolder.getDimen();
+                if (selectedFile.getDimen() == 1) {
+                    factor = 1;
+                }
+                String content = xmlRead.getContent(xmlFile.getDocument(), factor);
+                textContent.setText(content);
             }
         });
     }
 
+    /**
+     * reload tree file view
+     */
     private void refreshTree() {
         Collections.sort(files, (o1, o2) -> o1.name.compareTo(o2.name));
 
-        rootNode = new DefaultMutableTreeNode("resources");
+        rootNode = new DefaultMutableTreeNode("res");
 
+        int selectedIndex = 1;
+
+        int i = 1;
         for (VirtualFileDimen file : files) {
             rootNode.add(file.node);
+            if (file.selected) {
+                selectedIndex = i;
+            }
+            i++;
+        }
+
+        if (selectedValuesFolder != null) {
+            cellRenderer.setDefaultNodeName(selectedValuesFolder.name);
+            treeValues.setCellRenderer(cellRenderer);
         }
 
         treeValues.setModel(new DefaultTreeModel(rootNode));
+        treeValues.setSelectionRow(selectedIndex);    // ignore root node
     }
 
     @Override
@@ -157,14 +196,52 @@ public class FormMain extends JFrame implements ActionListener {
         }
     }
 
+    public void setProject(Project project) {
+        this.project = project;
+    }
+
+    public void setXmlFile(XmlFileImpl psiFile) {
+        this.xmlFile = psiFile;
+
+        String content = xmlRead.getContent(xmlFile.getDocument());
+        textContent.setText(content);
+    }
+
+    public void refreshData() {
+        files.clear();
+
+        // get selected file dimens.xml
+        VirtualFile fileDimens = xmlFile.getVirtualFile();
+        selectedValuesFolder = new VirtualFileDimen(fileDimens);
+        selectedValuesFolder.selected = true;
+
+        // find all file dimens.xml
+        VirtualFile folderRes = fileDimens.getParent().getParent();
+        VirtualFile[] valuesFolders = folderRes.getChildren();
+
+        for (VirtualFile folder : valuesFolders) {
+            if (folder.getName().contains("values")) {
+                VirtualFile[] subFolder = folder.getChildren();
+                for (VirtualFile xmlFile : subFolder) {
+                    if (xmlFile.getName().equalsIgnoreCase("dimens.xml")) {
+                        VirtualFileDimen valuesFolder = new VirtualFileDimen(xmlFile);
+                        files.add(valuesFolder);
+                        if (folder.getName().equalsIgnoreCase(selectedValuesFolder.name)) {
+                            valuesFolder.selected = true;
+                        }
+                    }
+                }
+            }
+        }
+
+        refreshTree();
+    }
+
     public void setData(Project project, XmlFileImpl psiFile) {
         VirtualFile virtualFile = (psiFile).getVirtualFile();
         XmlDocument document = psiFile.getDocument();
         Assert.assertNotNull(document);
 
-        // TODO get list dimens files in 'res' folder
-        // TODO add to list: files with virtualFiles
-        // TODO add to jTree
 
         String filePath = virtualFile.getPath();
         System.out.println("file path: " + filePath);
@@ -240,5 +317,9 @@ public class FormMain extends JFrame implements ActionListener {
         }
 
         refreshTree();
+    }
+
+    public void setHelp(String help) {
+        textHelp.setText(help);
     }
 }

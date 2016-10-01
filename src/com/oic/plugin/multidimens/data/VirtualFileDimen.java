@@ -1,6 +1,8 @@
 package com.oic.plugin.multidimens.data;
 
 import com.intellij.openapi.vfs.VirtualFile;
+import com.oic.plugin.multidimens.common.view.tree.StyleTreeNode;
+import com.oic.plugin.multidimens.logic.LogicFactory;
 
 import javax.swing.tree.DefaultMutableTreeNode;
 
@@ -12,29 +14,41 @@ public class VirtualFileDimen {
 
     public VirtualFile virtualFile = null;
 
-    public DefaultMutableTreeNode node = null;
+    public StyleTreeNode node = null;
 
     public boolean selected = false;
 
-    public VirtualFileDimen(String name){
+    public VirtualFileDimen(String name) {
         this.name = name;
-        this.node = new DefaultMutableTreeNode(this);
+        this.node = new StyleTreeNode(this);
     }
 
-    public VirtualFileDimen(VirtualFile virtualFile){
+    /**
+     * @param virtualFile dimens.xml file
+     */
+    public VirtualFileDimen(VirtualFile virtualFile) {
         this.virtualFile = virtualFile;
-        this.name = virtualFile.getName();
-        this.node = new DefaultMutableTreeNode(this);
+        this.name = virtualFile.getParent().getName();
+        this.node = new StyleTreeNode(this);
     }
 
     /**
      * @return empty string if virtualFile is null
      */
-    public String getPath(){
-        if(virtualFile == null){
+    public String getPath() {
+        if (virtualFile == null) {
             return "";
         }
         return virtualFile.getPath();
+    }
+
+    /**
+     * @return 1 if dimen value is missing
+     */
+    public float getDimen() {
+        String folderValueBase = virtualFile.getParent().getName();
+        float value = (float)LogicFactory.getLogicXmlRead().getDimenOfValueFolder(folderValueBase);
+        return Math.max(1f, value);
     }
 
     @Override

@@ -42,6 +42,28 @@ public class MouseUtils {
         tree.addMouseListener(ma);
     }
 
+    public static void setHintOnMouseHover(JComponent view, String tooltip, JLabel onView){
+        view.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                super.mouseEntered(e);
+                onView.setText(tooltip);
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                super.mouseExited(e);
+                onView.setText("");
+            }
+
+//            @Override
+//            public void mouseMoved(MouseEvent e) {
+//                super.mouseMoved(e);
+//                onView.setText(tooltip);
+//            }
+        });
+    }
+
     public interface OnJTreeMouseClickListener {
 
         void onNodeLeftMouseClick(MouseEvent event, DefaultMutableTreeNode node);

@@ -15,9 +15,10 @@ import org.junit.Assert;
 
 /**
  * Created by FRAMGIA\pham.van.khac on 9/29/16.
+ * Right mouse click on any dimens.xml file, context menu "Multi Dimens Tool" appears.
  */
 public class MakeMultiDimenAction extends AnAction {
-    public static final String TITLE = "Multi Dimens Tool";
+    private static final String TITLE = "Multi Dimens Tool";
 
     @Override
     public void actionPerformed(AnActionEvent e) {
@@ -32,9 +33,11 @@ public class MakeMultiDimenAction extends AnAction {
         if (psiFile instanceof com.intellij.psi.impl.source.xml.XmlFileImpl) {
             FormMain makeForm = new FormMain();
             makeForm.setVisible(true);
-            makeForm.setData(project, (XmlFileImpl) psiFile);
+            makeForm.setProject(project);
+            makeForm.setXmlFile((XmlFileImpl) psiFile);
+            makeForm.refreshData();
         } else {
-            Messages.showInfoMessage("please select dimens.xml file" + file, TITLE);
+            Messages.showInfoMessage("please select dimens.xml file " + file, TITLE);
         }
     }
 
@@ -44,7 +47,9 @@ public class MakeMultiDimenAction extends AnAction {
         boolean isDirectory = ActionUtils.isSelectDirectory(e);
         boolean isXmlFile = ActionUtils.isSelectXmlFile(e);
 
-        e.getPresentation().setVisible(project != null && project.isOpen() && !isDirectory && isXmlFile);
+        boolean shouldShowContextMenu = project != null && project.isOpen() && !isDirectory && isXmlFile;
+
+        e.getPresentation().setVisible(shouldShowContextMenu);
     }
 
 }

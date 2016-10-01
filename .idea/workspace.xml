@@ -2,21 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c0c385d-3106-441c-b6ed-3cc4d7d14706" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oic/plugin/multidimens/action/MakeMultiDimenAction.java" afterPath="$PROJECT_DIR$/src/com/oic/plugin/multidimens/plugin/action/MakeMultiDimenAction.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oic/plugin/multidimens/action/handler/MyTypedHandler.java" afterPath="$PROJECT_DIR$/src/com/oic/plugin/multidimens/plugin/handler/MyTypedHandler.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oic/plugin/multidimens/application/MyApplicationComp.java" afterPath="$PROJECT_DIR$/src/com/oic/plugin/multidimens/plugin/application/MyApplicationComp.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oic/plugin/multidimens/extensions/TextOnlyTreeStructureProvider.java" afterPath="$PROJECT_DIR$/src/com/oic/plugin/multidimens/plugin/extensions/TextOnlyTreeStructureProvider.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oic/plugin/multidimens/module/MyModuleComp.java" afterPath="$PROJECT_DIR$/src/com/oic/plugin/multidimens/plugin/module/MyModuleComp.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oic/plugin/multidimens/project/MyProjectComp.java" afterPath="$PROJECT_DIR$/src/com/oic/plugin/multidimens/plugin/project/MyProjectComp.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oic/plugin/multidimens/sample/Consts.java" afterPath="$PROJECT_DIR$/src/com/oic/plugin/multidimens/plugin/sample/Consts.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oic/plugin/multidimens/sample/EditorIllustration.java" afterPath="$PROJECT_DIR$/src/com/oic/plugin/multidimens/plugin/sample/EditorIllustration.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oic/plugin/multidimens/sample/MyShowDialog.java" afterPath="$PROJECT_DIR$/src/com/oic/plugin/multidimens/plugin/sample/MyShowDialog.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oic/plugin/multidimens/sample/PasteAction.java" afterPath="$PROJECT_DIR$/src/com/oic/plugin/multidimens/plugin/sample/PasteAction.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oic/plugin/multidimens/sample/StylerEngine.java" afterPath="$PROJECT_DIR$/src/com/oic/plugin/multidimens/plugin/sample/StylerEngine.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oic/plugin/multidimens/sample/StylerUtils.java" afterPath="$PROJECT_DIR$/src/com/oic/plugin/multidimens/plugin/sample/StylerUtils.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oic/plugin/multidimens/sample/TextBoxes.java" afterPath="$PROJECT_DIR$/src/com/oic/plugin/multidimens/plugin/sample/TextBoxes.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oic/plugin/multidimens/common/StringUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oic/plugin/multidimens/common/view/cell/CellRenderer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oic/plugin/multidimens/common/view/tree/StyleTreeNode.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oic/plugin/multidimens/logic/LogicFactory.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oic/plugin/multidimens/logic/LogicXmlRead.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oic/plugin/multidimens/logic/LogicXmlWrite.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oic/plugin/multidimens/logic/impl/LogicXmlReadImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oic/plugin/multidimens/logic/impl/LogicXmlWriteImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/META-INF/plugin.xml" afterPath="$PROJECT_DIR$/resources/META-INF/plugin.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oic/plugin/multidimens/common/MouseUtils.java" afterPath="$PROJECT_DIR$/src/com/oic/plugin/multidimens/common/MouseUtils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oic/plugin/multidimens/data/VirtualFileDimen.java" afterPath="$PROJECT_DIR$/src/com/oic/plugin/multidimens/data/VirtualFileDimen.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oic/plugin/multidimens/plugin/action/MakeMultiDimenAction.java" afterPath="$PROJECT_DIR$/src/com/oic/plugin/multidimens/plugin/action/MakeMultiDimenAction.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oic/plugin/multidimens/ui/menu/InsertDimenMenu.java" afterPath="$PROJECT_DIR$/src/com/oic/plugin/multidimens/ui/menu/InsertDimenMenu.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oic/plugin/multidimens/ui/window/FormMain.form" afterPath="$PROJECT_DIR$/src/com/oic/plugin/multidimens/ui/window/FormMain.form" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oic/plugin/multidimens/ui/window/FormMain.java" afterPath="$PROJECT_DIR$/src/com/oic/plugin/multidimens/ui/window/FormMain.java" />
     </list>
     <ignored path="oic-plugin.iws" />
@@ -48,15 +47,110 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="FormMain.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FormMain.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/oic/plugin/multidimens/ui/window/FormMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
-              <caret line="126" column="42" selection-start-line="126" selection-start-column="42" selection-end-line="126" selection-end-column="42" />
+            <state relative-caret-position="774">
+              <caret line="91" column="78" selection-start-line="91" selection-start-column="78" selection-end-line="91" selection-end-column="78" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#initWindows#0;class#FormMain#0" expanded="false" />
+                <element signature="e#6991#6992#0" expanded="true" />
+                <element signature="e#7029#7030#0" expanded="true" />
+                <element signature="e#11637#11638#0" expanded="true" />
+                <element signature="e#11675#11676#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CellRenderer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/oic/plugin/multidimens/common/view/cell/CellRenderer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="298">
+              <caret line="35" column="29" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FormMain.form" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/oic/plugin/multidimens/ui/window/FormMain.form">
+          <provider selected="true" editor-type-id="ui-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MouseUtils.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/oic/plugin/multidimens/common/MouseUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="720">
+              <caret line="56" column="13" selection-start-line="56" selection-start-column="13" selection-end-line="56" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StyleTreeNode.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/oic/plugin/multidimens/common/view/tree/StyleTreeNode.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#312#313#0" expanded="true" />
+                <element signature="e#339#340#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LogicXmlRead.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/oic/plugin/multidimens/logic/LogicXmlRead.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="40" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LogicXmlReadImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/oic/plugin/multidimens/logic/impl/LogicXmlReadImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="358">
+              <caret line="40" column="19" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1746#1747#0" expanded="true" />
+                <element signature="e#1793#1794#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StringUtils.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/oic/plugin/multidimens/common/StringUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="38" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="38" />
+              <folding>
+                <element signature="e#254#255#0" expanded="true" />
+                <element signature="e#303#304#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MakeMultiDimenAction.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/oic/plugin/multidimens/plugin/action/MakeMultiDimenAction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="37" column="35" selection-start-line="37" selection-start-column="35" selection-end-line="37" selection-end-column="35" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -70,8 +164,9 @@
         <option value="ProjectComponent" />
         <option value="ModuleComponent" />
         <option value="Action" />
-        <option value="Class" />
         <option value="package-info" />
+        <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -99,12 +194,22 @@
         <option value="$PROJECT_DIR$/src/com/oic/plugin/multidimens/common/ActionUtils.java" />
         <option value="$PROJECT_DIR$/src/com/oic/plugin/multidimens/ui/dialog/FormMain.form" />
         <option value="$PROJECT_DIR$/src/com/oic/plugin/multidimens/action/MakeMultiDimenAction.java" />
-        <option value="$PROJECT_DIR$/src/com/oic/plugin/multidimens/common/MouseUtils.java" />
-        <option value="$PROJECT_DIR$/src/com/oic/plugin/multidimens/ui/menu/InsertDimenMenu.java" />
         <option value="$PROJECT_DIR$/src/com/oic/plugin/multidimens/ui/menu/EditDeleteMenu.java" />
-        <option value="$PROJECT_DIR$/src/com/oic/plugin/multidimens/ui/window/FormMain.form" />
+        <option value="$PROJECT_DIR$/src/com/oic/plugin/multidimens/common/ResourceUtils.java" />
+        <option value="$PROJECT_DIR$/src/com/oic/plugin/multidimens/ui/menu/InsertDimenMenu.java" />
+        <option value="$PROJECT_DIR$/src/com/oic/plugin/multidimens/logic/impl/LogicXmlWriteImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/oic/plugin/multidimens/logic/LogicFactory.java" />
+        <option value="$PROJECT_DIR$/src/com/oic/plugin/multidimens/plugin/action/MakeMultiDimenAction.java" />
+        <option value="$PROJECT_DIR$/src/com/oic/plugin/multidimens/common/StringUtils.java" />
+        <option value="$PROJECT_DIR$/src/com/oic/plugin/multidimens/logic/LogicXmlRead.java" />
+        <option value="$PROJECT_DIR$/src/com/oic/plugin/multidimens/logic/impl/LogicXmlReadImpl.java" />
+        <option value="/Library/Java/JavaVirtualMachines/jdk1.8.0_72.jdk/Contents/Home/jre/lib/ext/sunjce_provider.jar!/com/sun/crypto/provider/GaloisCounterMode.class" />
         <option value="$PROJECT_DIR$/src/com/oic/plugin/multidimens/data/VirtualFileDimen.java" />
+        <option value="$PROJECT_DIR$/src/com/oic/plugin/multidimens/common/view/tree/StyleTreeNode.java" />
+        <option value="$PROJECT_DIR$/src/com/oic/plugin/multidimens/common/view/cell/CellRenderer.java" />
+        <option value="$PROJECT_DIR$/src/com/oic/plugin/multidimens/common/MouseUtils.java" />
         <option value="$PROJECT_DIR$/src/com/oic/plugin/multidimens/ui/window/FormMain.java" />
+        <option value="$PROJECT_DIR$/src/com/oic/plugin/multidimens/ui/window/FormMain.form" />
       </list>
     </option>
   </component>
@@ -119,10 +224,10 @@
     <treeState />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="70" />
-    <option name="y" value="52" />
-    <option name="width" value="1403" />
-    <option name="height" value="1028" />
+    <option name="x" value="51" />
+    <option name="y" value="23" />
+    <option name="width" value="1629" />
+    <option name="height" value="1027" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -137,7 +242,7 @@
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
-      <showMembers />
+      <showMembers ProjectPane="false" />
       <showModules />
       <showLibraryContents />
       <hideEmptyPackages />
@@ -149,17 +254,18 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="oic-plugin" />
+              <option name="myItemId" value="TestPlugin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="oic-plugin" />
+              <option name="myItemId" value="TestPlugin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -169,7 +275,7 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="oic-plugin" />
+              <option name="myItemId" value="TestPlugin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -199,7 +305,7 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="oic-plugin" />
+              <option name="myItemId" value="TestPlugin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -225,7 +331,7 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="oic-plugin" />
+              <option name="myItemId" value="TestPlugin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -247,7 +353,7 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="oic-plugin" />
+              <option name="myItemId" value="TestPlugin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -263,6 +369,60 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TestPlugin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="oic-plugin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="multidimens" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TestPlugin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="oic-plugin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TestPlugin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="oic-plugin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="image" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane">
@@ -271,7 +431,6 @@
       <pane id="Scratches">
         <subPane />
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -280,7 +439,13 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/build.gradle" />
     <property name="external.system.task.project.file.to.start" value="$PROJECT_DIR$/build.gradle" />
     <property name="SearchEverywhereHistoryKey" value="PsiJavaDire&#9;PSI&#9;JAVA://com.intellij.psi.impl.file.PsiJavaDirectoryImpl" />
-    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="272" />
+    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="295" />
+    <property name="restartRequiresConfirmation" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/image" />
+    </key>
   </component>
   <component name="RunManager" selected="Plugin.Plugin">
     <configuration default="false" name="build" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
@@ -580,28 +745,37 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="70" y="52" width="1403" height="1028" extended-state="4" />
+    <frame x="51" y="23" width="1629" height="1027" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32795697" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3272727" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5030722" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5075269" sideWeight="0.4969278" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33870968" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26524064" sideWeight="0.4969278" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3379679" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2284451" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17391305" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39139786" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39037433" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -623,7 +797,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="16" />
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <option name="time" value="22" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
@@ -636,69 +813,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/META-INF/plugin.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oic/plugin/multidimens/plugin/module/MyModuleComp.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/oic/plugin/multidimens/plugin/application/MyApplicationComp.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/oic/plugin/multidimens/plugin/project/MyProjectComp.java" />
-    <entry file="file://$PROJECT_DIR$/resources/META-INF/plugin.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
-          <caret line="50" column="11" selection-start-line="50" selection-start-column="11" selection-end-line="50" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oic/plugin/multidimens/plugin/module/MyModuleComp.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/oic/plugin/multidimens/plugin/application/MyApplicationComp.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/oic/plugin/multidimens/plugin/project/MyProjectComp.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/oic/plugin/multidimens/plugin/sample/PasteAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oic/plugin/multidimens/plugin/sample/StylerEngine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="33" column="23" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oic/plugin/multidimens/plugin/sample/TextBoxes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oic/plugin/multidimens/plugin/sample/MyShowDialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oic/plugin/multidimens/plugin/application/MyApplicationComp.java" />
-    <entry file="file://$PROJECT_DIR$/../intellij-community-master/platform/editor-ui-api/src/com/intellij/openapi/actionSystem/CommonDataKeys.java" />
-    <entry file="file://$PROJECT_DIR$/../intellij-community-master/platform/platform-api/src/com/intellij/openapi/editor/actionSystem/EditorAction.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/oic/plugin/multidimens/plugin/project/MyProjectComp.java" />
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oic/plugin/multidimens/plugin/module/MyModuleComp.java" />
-    <entry file="file://$PROJECT_DIR$/build.gradle" />
     <entry file="file://$PROJECT_DIR$/../intellij-community-master/platform/core-impl/src/com/intellij/psi/impl/PsiElementBase.java" />
     <entry file="file://$PROJECT_DIR$/../intellij-community-master/platform/core-impl/src/com/intellij/psi/impl/file/PsiDirectoryImpl.java" />
     <entry file="file://$PROJECT_DIR$/../intellij-community-master/java/java-impl/src/com/intellij/psi/impl/file/PsiJavaDirectoryImpl.java" />
@@ -745,7 +859,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-8">
           <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -753,7 +866,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -761,7 +873,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -769,7 +880,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -777,7 +887,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -785,7 +894,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -793,15 +901,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oic/plugin/multidimens/common/ActionUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="35" column="36" selection-start-line="35" selection-start-column="36" selection-end-line="35" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -809,100 +908,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="27" column="17" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oic/plugin/multidimens/ui/dialog/FormMain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oic/plugin/multidimens/ui/dialog/FormMain.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/javax/swing/JFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="160" column="18" selection-start-line="160" selection-start-column="18" selection-end-line="160" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oic/plugin/multidimens/plugin/action/MakeMultiDimenAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="59" selection-start-line="36" selection-start-column="59" selection-end-line="36" selection-end-column="59" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oic/plugin/multidimens/ui/menu/InsertDimenMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oic/plugin/multidimens/common/MouseUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="42" column="5" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#434#1293#0" expanded="true" />
-            <element signature="e#1292#1293#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oic/plugin/multidimens/ui/menu/EditDeleteMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="26" column="61" selection-start-line="26" selection-start-column="61" selection-end-line="26" selection-end-column="61" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oic/plugin/multidimens/ui/window/FormMain.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oic/plugin/multidimens/data/VirtualFileDimen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="7" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#962#963#0" expanded="true" />
-            <element signature="e#989#990#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oic/plugin/multidimens/logic/package-info.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oic/plugin/multidimens/ui/dialog/FormMain.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/oic/plugin/multidimens/ui/dialog/FormMain.form" />
+    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/javax/swing/JFrame.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/oic/plugin/multidimens/ui/menu/EditDeleteMenu.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/oic/plugin/multidimens/logic/package-info.java" />
     <entry file="file://$PROJECT_DIR$/resources/META-INF/plugin.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="321">
@@ -911,15 +924,232 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oic/plugin/multidimens/ui/window/FormMain.java">
+    <entry file="file://$PROJECT_DIR$/src/com/oic/plugin/multidimens/common/ResourceUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="126" column="42" selection-start-line="126" selection-start-column="42" selection-end-line="126" selection-end-column="42" />
+        <state relative-caret-position="120">
+          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oic/plugin/multidimens/ui/menu/InsertDimenMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oic/plugin/multidimens/common/ActionUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="45" column="19" selection-start-line="45" selection-start-column="19" selection-end-line="45" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oic/plugin/multidimens/logic/LogicXmlWrite.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oic/plugin/multidimens/logic/impl/LogicXmlWriteImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="55" selection-start-line="7" selection-start-column="55" selection-end-line="7" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oic/plugin/multidimens/logic/LogicFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="42" selection-start-line="28" selection-start-column="42" selection-end-line="28" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#initWindows#0;class#FormMain#0" expanded="false" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oic/plugin/multidimens/plugin/action/MakeMultiDimenAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="37" column="35" selection-start-line="37" selection-start-column="35" selection-end-line="37" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oic/plugin/multidimens/common/StringUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="38" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="38" />
+          <folding>
+            <element signature="e#254#255#0" expanded="true" />
+            <element signature="e#303#304#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oic/plugin/multidimens/logic/LogicXmlRead.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="40" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oic/plugin/multidimens/logic/impl/LogicXmlReadImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="40" column="19" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1746#1747#0" expanded="true" />
+            <element signature="e#1793#1794#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home/jre/lib/ext/sunjce_provider.jar!/com/sun/crypto/provider/CipherCore.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="373" column="149" selection-start-line="373" selection-start-column="149" selection-end-line="373" selection-end-column="149" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_72.jdk/Contents/Home/jre/lib/ext/sunjce_provider.jar!/com/sun/crypto/provider/GaloisCounterMode.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="80" column="35" selection-start-line="80" selection-start-column="35" selection-end-line="80" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/xercesImpl.jar!/org/apache/xerces/parsers/AbstractSAXParser.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="822" column="103" selection-start-line="822" selection-start-column="103" selection-end-line="822" selection-end-column="103" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/xercesImpl.jar!/org/apache/xerces/util/ParserConfigurationSettings.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="97" column="80" selection-start-line="97" selection-start-column="80" selection-end-line="97" selection-end-column="80" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home/jre/lib/rt.jar!/sun/reflect/generics/parser/SignatureParser.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home/src.zip!/java/util/ResourceBundle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="449" column="0" selection-start-line="449" selection-start-column="0" selection-end-line="449" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oic/plugin/multidimens/data/VirtualFileDimen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="50" column="23" selection-start-line="50" selection-start-column="23" selection-end-line="50" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home/src.zip!/javax/swing/tree/DefaultMutableTreeNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="126" column="11" selection-start-line="126" selection-start-column="11" selection-end-line="126" selection-end-column="11" />
+          <folding>
+            <element signature="e#4357#4358#0" expanded="false" />
+            <element signature="e#4395#4396#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oic/plugin/multidimens/common/view/tree/StyleTreeNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#312#313#0" expanded="true" />
+            <element signature="e#339#340#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home/src.zip!/java/lang/Class.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="118" column="10" selection-start-line="118" selection-start-column="10" selection-end-line="118" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home/src.zip!/java/lang/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="63" column="26" selection-start-line="63" selection-start-column="26" selection-end-line="63" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/production/oic-plugin/image/selected.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oic/plugin/multidimens/common/view/cell/CellRenderer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="35" column="29" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oic/plugin/multidimens/common/MouseUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="56" column="13" selection-start-line="56" selection-start-column="13" selection-end-line="56" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oic/plugin/multidimens/ui/window/FormMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="774">
+          <caret line="91" column="78" selection-start-line="91" selection-start-column="78" selection-end-line="91" selection-end-column="78" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#6991#6992#0" expanded="true" />
+            <element signature="e#7029#7030#0" expanded="true" />
+            <element signature="e#11637#11638#0" expanded="true" />
+            <element signature="e#11675#11676#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oic/plugin/multidimens/ui/window/FormMain.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
       </provider>
     </entry>
   </component>

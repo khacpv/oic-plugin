@@ -37,15 +37,15 @@ public class LogicXmlReadImpl implements LogicXmlRead {
 
     @Override
     public int getDimenOfValueFolder(String folderName) {
-        if(folderName.equalsIgnoreCase(VAL_VALUES)){
+        if (folderName.equalsIgnoreCase(VAL_VALUES)) {
             return 0;
         }
-        if(folderName.contains(VAL_VALUES)){
+        if (folderName.contains(VAL_VALUES)) {
             String dimen = StringUtils.extractNumber(folderName);
             try {
                 return Integer.parseInt(dimen);
-            }catch (NumberFormatException e){
-                System.out.println("getDimenOfValueFolder: dimen not found: "+folderName);
+            } catch (NumberFormatException e) {
+                System.out.println("getDimenOfValueFolder: dimen not found: " + folderName);
             }
         }
         return 0;
@@ -74,11 +74,17 @@ public class LogicXmlReadImpl implements LogicXmlRead {
 
                         if (tagValue.endsWith(VAL_DIP) || tagValue.endsWith(VAL_DP)) {
                             String dimen = tagValue.replaceAll(VAL_DIP, "").replaceAll(VAL_DP, "");
+                            String tagUnit = tagValue.replaceAll(dimen, "");
                             try {
                                 float dimenF = Float.valueOf(dimen) * fract;
-                                String newContent = tag.getText().replaceAll(dimen, dimenF + "");
+                                String dimenFStr = String.format("%.02f", dimenF).replace(".00","");
 
-                                content.append(newContent);
+                                int startIndex = tag.getText().lastIndexOf(dimen);
+                                int endIndex = startIndex + (dimen +tagUnit).length();
+                                StringBuilder contentBuilder = new StringBuilder(tag.getText());
+                                contentBuilder.replace(startIndex, endIndex, dimenFStr+tagUnit);
+
+                                content.append(contentBuilder.toString());
                             } catch (NumberFormatException e) {
                                 System.out.println("extract dimen failed: " + tagValue);
                             }

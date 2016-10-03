@@ -7,11 +7,12 @@ import java.awt.event.ActionEvent;
  * Created by FRAMGIA\pham.van.khac on 9/30/16.
  * Popup for insert a new dimens file
  */
-public class InsertDimenMenu extends JPopupMenu {
+@Deprecated
+public class InsertMenu extends JPopupMenu {
 
     private static final String MENU_ADD_VALUES = "Add dimens.xml";
 
-    public InsertDimenMenu(OnInsertDimenListener listener) {
+    public InsertMenu(OnInsertDimenListener listener) {
 
         JMenuItem itemInsert = new JMenuItem(new AbstractAction(MENU_ADD_VALUES) {
             public void actionPerformed(ActionEvent e) {

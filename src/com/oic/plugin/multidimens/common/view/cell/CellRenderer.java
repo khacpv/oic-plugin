@@ -1,5 +1,6 @@
 package com.oic.plugin.multidimens.common.view.cell;
 
+import com.intellij.util.Url;
 import com.oic.plugin.multidimens.common.view.tree.StyleTreeNode;
 import com.oic.plugin.multidimens.data.VirtualFileDimen;
 
@@ -7,7 +8,6 @@ import javax.swing.*;
 import javax.swing.tree.DefaultTreeCellRenderer;
 import java.awt.*;
 import java.awt.font.TextAttribute;
-import java.awt.image.BufferedImage;
 import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
@@ -20,7 +20,8 @@ public class CellRenderer extends DefaultTreeCellRenderer {
     String defaultNodeName;
 
     private JLabel label;
-    private URL imageUrl;
+    private URL selectedUrl;
+    private URL excludedUrl;
 
     Map<TextAttribute, Object> attributesBold;
     Map<TextAttribute, Object> attributesNormal;
@@ -34,7 +35,8 @@ public class CellRenderer extends DefaultTreeCellRenderer {
         attributesNormal = new HashMap<>();
 
         label = new JLabel();
-        imageUrl = getClass().getResource("/image/selected.png");
+        selectedUrl = getClass().getResource("/image/selected.png");
+        excludedUrl = getClass().getResource("/image/excluded.png");
     }
 
     public void setDefaultNodeName(String name) {
@@ -51,9 +53,16 @@ public class CellRenderer extends DefaultTreeCellRenderer {
             StyleTreeNode node = (StyleTreeNode) value;
             if(node.getUserObject() instanceof VirtualFileDimen){
                 VirtualFileDimen file = (VirtualFileDimen)node.getUserObject();
+
+                if(file.excluded){
+                    label.setText(file.name);
+                    label.setIcon(getIconImage(excludedUrl));
+                    return label;
+                }
+
                 if (defaultNodeName.equalsIgnoreCase(file.name)) {
                     label.setText(file.name);
-                    label.setIcon(getIconImage());
+                    label.setIcon(getIconImage(selectedUrl));
                     return label;
                 }
             }
@@ -61,10 +70,10 @@ public class CellRenderer extends DefaultTreeCellRenderer {
         return rendererComponent;
     }
 
-    private ImageIcon getIconImage(){
-        ImageIcon imageIcon = new ImageIcon(imageUrl); // load the image to a imageIcon
+    private ImageIcon getIconImage(URL iconUrl){
+        ImageIcon imageIcon = new ImageIcon(iconUrl); // load the image to a imageIcon
         Image image = imageIcon.getImage(); // transform it
-        Image newimg = image.getScaledInstance(16, 16,  java.awt.Image.SCALE_SMOOTH); // scale it the smooth way
+        Image newimg = image.getScaledInstance(15, 15,  java.awt.Image.SCALE_SMOOTH); // scale it the smooth way
         return new ImageIcon(newimg);  // transform it back
     }
 }

@@ -1,5 +1,6 @@
 package com.oic.plugin.multidimens.plugin.action;
 
+import com.android.tools.idea.navigator.nodes.AndroidResFileNode;
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.actionSystem.CommonDataKeys;
@@ -27,17 +28,25 @@ public class MakeMultiDimenAction extends AnAction {
         final Navigatable[] data = CommonDataKeys.NAVIGATABLE_ARRAY.getData(e.getDataContext());
         Assert.assertNotNull(data);
 
-        FileNode file = (FileNode) data[0];
-        PsiElement psiFile = file.getPsiElement();
+        Navigatable node = data[0];
 
-        if (psiFile instanceof com.intellij.psi.impl.source.xml.XmlFileImpl) {
+        PsiElement psiFile = null;
+
+        // Project Files
+        if (node instanceof FileNode) {
+            psiFile = ((FileNode) node).getPsiElement();
+        }
+        // Android
+        else if (node instanceof AndroidResFileNode) {
+            psiFile = ((AndroidResFileNode) node).getValue();
+        }
+
+        if (psiFile != null && psiFile instanceof com.intellij.psi.impl.source.xml.XmlFileImpl) {
             FormMain makeForm = new FormMain();
             makeForm.setVisible(true);
             makeForm.setProject(project);
             makeForm.setXmlFile((XmlFileImpl) psiFile);
             makeForm.refreshData();
-        } else {
-            Messages.showInfoMessage("please select dimens.xml file " + file, TITLE);
         }
     }
 

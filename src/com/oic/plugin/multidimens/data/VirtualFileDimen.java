@@ -18,6 +18,8 @@ public class VirtualFileDimen {
 
     public boolean selected = false;
 
+    public boolean excluded = false;
+
     public VirtualFileDimen(String name) {
         this.name = name;
         this.node = new StyleTreeNode(this);

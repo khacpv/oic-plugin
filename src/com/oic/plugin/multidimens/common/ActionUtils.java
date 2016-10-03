@@ -1,5 +1,6 @@
 package com.oic.plugin.multidimens.common;
 
+import com.android.tools.idea.navigator.nodes.AndroidResFileNode;
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.actionSystem.CommonDataKeys;
@@ -41,7 +42,15 @@ public class ActionUtils {
         Assert.assertNotNull(data);
         Navigatable node = data[0];
         Assert.assertNotNull(node);
-        // TODO check instance of AndroidResFileNode
+
+        // Android perspective
+        if (node instanceof AndroidResFileNode){
+            if("dimens.xml".equalsIgnoreCase(((AndroidResFileNode) node).getName())){
+                isXmlFile = true;
+            }
+        }
+
+        // Project Files perspective
         if (node instanceof FileNode) {
             PsiElement psiFile = ((FileNode) node).getPsiElement();
             if (psiFile instanceof com.intellij.psi.impl.source.xml.XmlFileImpl) {

@@ -12,11 +12,12 @@ import com.oic.plugin.multidimens.common.view.cell.CellRenderer;
 import com.oic.plugin.multidimens.data.VirtualFileDimen;
 import com.oic.plugin.multidimens.logic.LogicFactory;
 import com.oic.plugin.multidimens.logic.LogicXmlRead;
-import com.oic.plugin.multidimens.ui.menu.EditDeleteMenu;
-import com.oic.plugin.multidimens.ui.menu.InsertDimenMenu;
+import com.oic.plugin.multidimens.ui.menu.DisableMenu;
+import com.oic.plugin.multidimens.ui.menu.InsertMenu;
 import org.junit.Assert;
 
 import javax.swing.*;
+import javax.swing.text.DefaultCaret;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.DefaultTreeModel;
 import java.awt.*;
@@ -102,38 +103,24 @@ public class FormMain extends JFrame implements ActionListener {
             public void onNodeRightMouseClick(MouseEvent event, DefaultMutableTreeNode node) {
                 if (node.toString().equalsIgnoreCase(rootNode.toString())) {
                     // show add new dimens
-                    InsertDimenMenu popup = new InsertDimenMenu(fileName -> {
-                        files.add(new VirtualFileDimen(fileName));
-                        refreshTree();
-                    });
-                    popup.show(event.getComponent(), event.getX(), event.getY());
+//                    InsertMenu popup = new InsertMenu(fileName -> {
+//                        files.add(new VirtualFileDimen(fileName));
+//                        refreshTree();
+//                    });
+//                    popup.show(event.getComponent(), event.getX(), event.getY());
                     return;
                 }
 
-                // show edit dimens: delete, rename
+                // show disable dimens
                 VirtualFileDimen selectedFile = (VirtualFileDimen) node.getUserObject();
-                EditDeleteMenu popup = new EditDeleteMenu(selectedFile, new EditDeleteMenu.OnInsertDimenListener() {
-                    @Override
-                    public void onEditDimen(String name) {
-                        for (VirtualFileDimen file : files) {
-                            if (file.name.equalsIgnoreCase(selectedFile.name)) {
-                                file.name = name;
-                                break;
-                            }
+                DisableMenu popup = new DisableMenu(selectedFile, () -> {
+                    for (VirtualFileDimen file : files) {
+                        if (file.name.equalsIgnoreCase(selectedFile.name)) {
+                            selectedFile.excluded = !selectedFile.excluded;
+                            break;
                         }
-                        refreshTree();
                     }
-
-                    @Override
-                    public void onDeleteDimen() {
-                        for (VirtualFileDimen file : files) {
-                            if (file.name.equalsIgnoreCase(selectedFile.name)) {
-                                files.remove(file);
-                                break;
-                            }
-                        }
-                        refreshTree();
-                    }
+                    refreshTree();
                 });
                 popup.show(event.getComponent(), event.getX(), event.getY());
             }
@@ -148,11 +135,13 @@ public class FormMain extends JFrame implements ActionListener {
                 // update content panel
                 VirtualFileDimen selectedFile = (VirtualFileDimen) node.getUserObject();
                 float factor = selectedFile.getDimen() / selectedValuesFolder.getDimen();
-                if (selectedFile.getDimen() == 1) {
+                if (selectedFile.getDimen() == 1 || selectedFile.excluded) {
                     factor = 1;
                 }
                 String content = xmlRead.getContent(xmlFile.getDocument(), factor);
                 textContent.setText(content);
+                DefaultCaret caret = (DefaultCaret)textContent.getCaret();
+                caret.setUpdatePolicy(DefaultCaret.NEVER_UPDATE);
             }
         });
     }

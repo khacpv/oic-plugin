@@ -41,6 +41,7 @@ public class ActionUtils {
         Assert.assertNotNull(data);
         Navigatable node = data[0];
         Assert.assertNotNull(node);
+        // TODO check instance of AndroidResFileNode
         if (node instanceof FileNode) {
             PsiElement psiFile = ((FileNode) node).getPsiElement();
             if (psiFile instanceof com.intellij.psi.impl.source.xml.XmlFileImpl) {

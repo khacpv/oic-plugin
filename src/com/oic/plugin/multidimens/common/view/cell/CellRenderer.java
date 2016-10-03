@@ -70,7 +70,7 @@ public class CellRenderer extends DefaultTreeCellRenderer {
         return rendererComponent;
     }
 
-    private ImageIcon getIconImage(URL iconUrl){
+    public static ImageIcon getIconImage(URL iconUrl){
         ImageIcon imageIcon = new ImageIcon(iconUrl); // load the image to a imageIcon
         Image image = imageIcon.getImage(); // transform it
         Image newimg = image.getScaledInstance(15, 15,  java.awt.Image.SCALE_SMOOTH); // scale it the smooth way

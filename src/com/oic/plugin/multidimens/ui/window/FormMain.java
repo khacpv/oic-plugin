@@ -71,8 +71,7 @@ public class FormMain extends JFrame implements ActionListener {
         setPreferredSize(new Dimension(800, 650));
         setMinimumSize(new Dimension(400, 350));
 
-        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
-        this.setLocation(dim.width / 2 - this.getSize().width / 2, dim.height / 2 - this.getSize().height / 2);
+        setAlwaysOnTop(true);
 
         setContentPane(rootPanel);
         pack();
@@ -88,9 +87,10 @@ public class FormMain extends JFrame implements ActionListener {
         treeValues.setCellRenderer(cellRenderer);
 
         // set hint text
-        MouseUtils.setHintOnMouseHover(treeValues,"Select file to see changes", textHelp);
-        MouseUtils.setHintOnMouseHover(textContent,"Type to edit", textHelp);
-        MouseUtils.setHintOnMouseHover(buttonExport,"Write to dimens.xml files", textHelp);
+        textHelp.setIcon(CellRenderer.getIconImage(getClass().getResource("/image/hint.png")));
+        MouseUtils.setHintOnMouseHover(treeValues, "Select file to see changes", textHelp);
+        MouseUtils.setHintOnMouseHover(textContent, "Type to edit", textHelp);
+        MouseUtils.setHintOnMouseHover(buttonExport, "Write to dimens.xml files", textHelp);
     }
 
     private void initEvents() {
@@ -113,6 +113,11 @@ public class FormMain extends JFrame implements ActionListener {
 
                 // show disable dimens
                 VirtualFileDimen selectedFile = (VirtualFileDimen) node.getUserObject();
+
+                if (selectedFile.selected) {
+                    return;
+                }
+
                 DisableMenu popup = new DisableMenu(selectedFile, () -> {
                     for (VirtualFileDimen file : files) {
                         if (file.name.equalsIgnoreCase(selectedFile.name)) {
@@ -140,7 +145,7 @@ public class FormMain extends JFrame implements ActionListener {
                 }
                 String content = xmlRead.getContent(xmlFile.getDocument(), factor);
                 textContent.setText(content);
-                DefaultCaret caret = (DefaultCaret)textContent.getCaret();
+                DefaultCaret caret = (DefaultCaret) textContent.getCaret();
                 caret.setUpdatePolicy(DefaultCaret.NEVER_UPDATE);
             }
         });

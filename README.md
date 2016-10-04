@@ -10,7 +10,13 @@
 
 [Sample Android Studio Plugin](https://yalantis.com/blog/android-studio-plugin-development)
 
-## How to install
+## How to install (for user)
+
+File -> Settings -> Plugin -> "Install plugin from disk" -> select oic-plugin.jar file -> restart Android Studio
+
+Right mouse click on a `value-w??dp/dimens.xml` file -> select **"Generate Multidimens Tool"**
+
+## How to install (for Contributors)
 
 ### Step 1:
 
